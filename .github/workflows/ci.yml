@@ -9,8 +9,6 @@ jobs:
       - name: Ckeckout code
         uses: actions/checkout@v4
       - name: Build Docker image
-        run: docker build -t myapp
-      - name: build test
-        run: docker build --help
+        run: docker build -t myapp .
       - name: Run container test
         run: docker run myapp echo "CI works"
