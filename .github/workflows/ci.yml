@@ -10,5 +10,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Docker image
         run: docker build -t myapp
+      - name: build test
+        run: docker build --help
       - name: Run container test
         run: docker run myapp echo "CI works"
