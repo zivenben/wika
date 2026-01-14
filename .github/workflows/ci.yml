@@ -1,0 +1,14 @@
+name: CI Docker
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckeckout code
+        uses: action/checkout@v4
+      - name: Build Docker image
+        run: docker build -t myapp
+      - name: Run container test
+        run: docker run myapp echo "CI works"
