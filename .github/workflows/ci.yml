@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ckeckout code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: Build Docker image
         run: docker build -t myapp
       - name: Run container test
